@@ -43,7 +43,17 @@ const surveyData = [
             },
             {
                 id: 'q1_5',
-                text: '1.5 Finns det husdjur i ditt hem?',
+                text: '1.5 Hur gör du med belysningen när du lämnar ditt rum?',
+                type: 'radio',
+                options: [
+                    'Lamporna får ofta vara tända.', 
+                    'Jag försöker komma ihåg att släcka.', 
+                    'Jag släcker nästan alltid lamporna när jag går ut.'
+                ]
+            },
+            {
+                id: 'q1_6',
+                text: '1.6 Finns det husdjur i ditt hem?',
                 type: 'radio',
                 options: [
                     'Ja, hund eller katt (köttätande).', 
@@ -63,14 +73,24 @@ const surveyData = [
                 text: '2.1 Hur ser din kost ut under en vanlig vecka?',
                 type: 'radio',
                 options: [
-                    'Jag äter kött (nöt/gris/lamm) nästan varje dag.', 
+                    'Jag äter rött kött (nöt/gris/lamm) nästan varje dag.', 
                     'Jag äter blandkost (kött ibland, men också fågel/fisk).', 
                     'Jag äter mest växtbaserat eller vegetariskt.'
                 ]
             },
             {
                 id: 'q2_2',
-                text: '2.2 Hur ofta slängs mat hemma hos er (från kylen eller tallriken)?',
+                text: '2.2 Hur ofta köper du eller din familj take-away eller snabbmat (vilket ofta innebär engångsförpackningar)?',
+                type: 'radio',
+                options: [
+                    'Flera gånger i veckan.', 
+                    'Någon gång i månaden.', 
+                    'Väldigt sällan.'
+                ]
+            },
+            {
+                id: 'q2_3',
+                text: '2.3 Hur ofta slängs mat hemma hos er (från kylen eller tallriken)?',
                 type: 'radio',
                 options: [
                     'Ofta.', 
@@ -98,9 +118,19 @@ const surveyData = [
             },
             {
                 id: 'q3_2',
-                text: '3.2 Ungefär hur mycket har du flugit det senaste året?',
+                text: '3.2 När du eller familjen beställer saker på nätet, hur kommer paketet oftast fram den sista biten?',
+                type: 'radio',
+                options: [
+                    'Det körs hela vägen hem till dörren (ofta med budbil).',
+                    'Vi hämtar hos ett ombud, ofta med bil.',
+                    'Vi hämtar hos ett ombud till fots eller med cykel.'
+                ]
+            },
+            {
+                id: 'q3_3',
+                text: '3.3 Ungefär hur mycket har du flugit det senaste året?',
                 type: 'text',
-                placeholder: 'T.ex. "en resa till Spanien" eller "har inte flugit alls"'
+                placeholder: 'T.ex. "en resa i Europa" eller "har inte flugit alls"'
             }
         ]
     },
@@ -111,7 +141,7 @@ const surveyData = [
         questions: [
             {
                 id: 'q4_1',
-                text: '4.1 Hur många timmar per dag spenderar du i genomsnitt på att streama video (TikTok/Youtube) eller spela onlinespel?',
+                text: '4.1 Hur många timmar per dag spenderar du i genomsnitt på att streama video (TikTok/Youtube/Netflix) eller spela onlinespel?',
                 type: 'radio',
                 options: ['Mer än 5 timmar.', '2–4 timmar.', 'Under 1 timme.']
             },
@@ -137,7 +167,17 @@ const surveyData = [
             },
             {
                 id: 'q4_4',
-                text: '4.4 Hur ofta byter du mobiltelefon?',
+                text: '4.4 När ett klädesplagg eller en pryl du gillar går sönder, vad händer oftast?',
+                type: 'radio',
+                options: [
+                    'Jag slänger den och köper nytt.', 
+                    'Den ligger kvar oanvänd i garderoben.', 
+                    'Jag försöker laga den, sy den, eller lämna in den för reparation.'
+                ]
+            },
+            {
+                id: 'q4_5',
+                text: '4.5 Hur ofta byter du mobiltelefon?',
                 type: 'radio',
                 options: [
                     'Varje år.', 
@@ -274,7 +314,7 @@ function generatePrompt() {
 Viktigast av allt: Ge din feedback som "Two stars and a wish"!
 ⭐ Star 1: Beröm något som eleven redan gör väldigt bra för klimatet (hitta något positivt i datan!).
 ⭐ Star 2: Beröm ett annat positivt mönster eller en klok kommentar eleven gjort.
-🌟 A Wish: Ge ETT konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck, utan att det känns övermäktigt. Välj något där de har egen agens (t.ex. inte byta värmesystem, utan kanske konsumtion, duschtid, eller svinn).
+🌟 A Wish: Ge ETT konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck, utan att det känns övermäktigt. Välj något där de har egen agens (t.ex. inte byta värmesystem, utan kanske konsumtion, reparation, pakethämtning eller duschtid).
 
 Fokusera på "empowerment" istället för skuld. Om eleven har lämnat egna kommentarer, väv in dem i ditt svar och bekräfta deras tankar! Undvik att vara mästrande.
 
