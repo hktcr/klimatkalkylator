@@ -8,22 +8,22 @@ const surveyData = [
                 id: 'q1_1',
                 text: '1.1 Hur bor du?',
                 type: 'radio',
-                options: ['I en stor villa.', 'I en mindre villa eller radhus.', 'I lägenhet.']
+                options: ['I stor villa.', 'I mindre villa eller radhus.', 'I lägenhet.']
             },
             {
                 id: 'q1_2',
-                text: '1.2 Hur värms ditt hem upp (kryssa i det som passar bäst, om du vet)?',
+                text: '1.2 Hur värms ditt hem upp?',
                 type: 'radio',
                 options: [
                     'Bergvärme, fjärrvärme eller solceller.', 
                     'Pellets, ved eller modern luftvärmepump.', 
                     'Direktverkande el eller äldre panna.', 
-                    'Jag vet faktiskt inte (vilket är helt okej!).'
+                    'Vet ej.'
                 ]
             },
             {
                 id: 'q1_3',
-                text: '1.3 Ungefär hur varmt är det hemma/i ditt rum?',
+                text: '1.3 Ungefär hur varmt är det hemma eller i ditt rum?',
                 type: 'radio',
                 options: [
                     'Varmt (22 grader eller varmare).', 
@@ -33,17 +33,17 @@ const surveyData = [
             },
             {
                 id: 'q1_4',
-                text: '1.4 Hur gör du med elektronik när du inte använder den (dator, TV osv)?',
+                text: '1.4 Hur gör du med elektronik när den inte används?',
                 type: 'radio',
                 options: [
-                    'De står ofta på eller i standby-läge.', 
-                    'Jag stänger av ibland, när jag kommer ihåg.', 
+                    'Den står ofta på eller i standby-läge.', 
+                    'Jag stänger av ibland när jag kommer ihåg.', 
                     'Jag stänger oftast av skärmar och apparater helt.'
                 ]
             },
             {
                 id: 'q1_5',
-                text: '1.5 Hur gör du med belysningen när du lämnar ditt rum?',
+                text: '1.5 Hur gör du med belysningen när du lämnar ett rum?',
                 type: 'radio',
                 options: [
                     'Lamporna får ofta vara tända.', 
@@ -73,14 +73,14 @@ const surveyData = [
                 text: '2.1 Hur ser din kost ut under en vanlig vecka?',
                 type: 'radio',
                 options: [
-                    'Jag äter rött kött (nöt/gris/lamm) nästan varje dag.', 
-                    'Jag äter blandkost (kött ibland, men också fågel/fisk).', 
+                    'Jag äter rött kött (nöt, gris, lamm) nästan varje dag.', 
+                    'Jag äter blandkost (kött ibland, men också fågel eller fisk).', 
                     'Jag äter mest växtbaserat eller vegetariskt.'
                 ]
             },
             {
                 id: 'q2_2',
-                text: '2.2 Hur ofta köper du eller din familj take-away eller snabbmat (vilket ofta innebär engångsförpackningar)?',
+                text: '2.2 Hur ofta köper du eller din familj take-away eller snabbmat?',
                 type: 'radio',
                 options: [
                     'Flera gånger i veckan.', 
@@ -90,7 +90,7 @@ const surveyData = [
             },
             {
                 id: 'q2_3',
-                text: '2.3 Hur ofta slängs mat hemma hos er (från kylen eller tallriken)?',
+                text: '2.3 Hur ofta slängs mat hemma hos er?',
                 type: 'radio',
                 options: [
                     'Ofta.', 
@@ -111,18 +111,18 @@ const surveyData = [
                 type: 'radio',
                 options: [
                     'Åker bil.', 
-                    'Kör A-traktor / EPA / Moped.',
+                    'Kör A-traktor, EPA eller moped.',
                     'Åker kollektivt (buss eller tåg) eller samåker.', 
                     'Går eller cyklar.'
                 ]
             },
             {
                 id: 'q3_2',
-                text: '3.2 När du eller familjen beställer saker på nätet, hur kommer paketet oftast fram den sista biten?',
+                text: '3.2 När du eller familjen beställer saker på nätet, hur kommer paketet fram den sista biten?',
                 type: 'radio',
                 options: [
-                    'Det körs hela vägen hem till dörren (ofta med budbil).',
-                    'Vi hämtar hos ett ombud, ofta med bil.',
+                    'Det körs hela vägen hem till dörren.',
+                    'Vi hämtar hos ett ombud med bil.',
                     'Vi hämtar hos ett ombud till fots eller med cykel.'
                 ]
             },
@@ -130,7 +130,7 @@ const surveyData = [
                 id: 'q3_3',
                 text: '3.3 Ungefär hur mycket har du flugit det senaste året?',
                 type: 'text',
-                placeholder: 'T.ex. "en resa i Europa" eller "har inte flugit alls"'
+                placeholder: 'Exempelvis "en resa i Europa" eller "har inte flugit alls"'
             }
         ]
     },
@@ -141,13 +141,13 @@ const surveyData = [
         questions: [
             {
                 id: 'q4_1',
-                text: '4.1 Hur många timmar per dag spenderar du i genomsnitt på att streama video (TikTok/Youtube/Netflix) eller spela onlinespel?',
+                text: '4.1 Hur många timmar per dag spenderar du i genomsnitt på att streama video eller spela onlinespel?',
                 type: 'radio',
-                options: ['Mer än 5 timmar.', '2–4 timmar.', 'Under 1 timme.']
+                options: ['Mer än 5 timmar.', '2-4 timmar.', 'Under 1 timme.']
             },
             {
                 id: 'q4_2',
-                text: '4.2 Hur ofta köper du nya saker (kläder, smink, in-game skins, inredning, prylar)?',
+                text: '4.2 Hur ofta köper du kläder, inredning, prylar eller in-game skins?',
                 type: 'radio',
                 options: [
                     'Flera gånger i månaden.', 
@@ -161,7 +161,7 @@ const surveyData = [
                 type: 'radio',
                 options: [
                     'Jag köper nästan alltid helt nytt.', 
-                    'Jag blandar mellan nytt och second hand (t.ex. Vinted/Tradera).', 
+                    'Jag blandar mellan nytt och second hand.', 
                     'Jag handlar ofta second hand eller byter med andra.'
                 ]
             },
@@ -172,7 +172,7 @@ const surveyData = [
                 options: [
                     'Jag slänger den och köper nytt.', 
                     'Den ligger kvar oanvänd i garderoben.', 
-                    'Jag försöker laga den, sy den, eller lämna in den för reparation.'
+                    'Jag försöker laga den eller lämna in den för reparation.'
                 ]
             },
             {
@@ -194,11 +194,11 @@ const surveyData = [
         questions: [
             {
                 id: 'q5_1',
-                text: '5.1 Hur gör du oftast med ditt eget skräp (pant, förpackningar, batterier)?',
+                text: '5.1 Hur gör du oftast med pant, förpackningar och batterier?',
                 type: 'radio',
                 options: [
                     'Lägger det mesta i den vanliga soppåsen.', 
-                    'Sorterar ibland (t.ex. pant och papper).', 
+                    'Sorterar ibland.', 
                     'Sorterar det mesta, även plast, papper och elektronik.'
                 ]
             },
@@ -273,10 +273,9 @@ function renderForm() {
                 questionBlock.appendChild(input);
             }
             
-            // Kommentarsfält för varje fråga
             const commentField = document.createElement('textarea');
             commentField.name = `${q.id}_comment`;
-            commentField.placeholder = "Egna tankar? (T.ex. varför du valde detta, om du vill förklara närmare...)";
+            commentField.placeholder = "Egna tankar? (Exempelvis varför du valde detta eller om du vill förklara närmare)";
             commentField.className = 'comment-field';
             questionBlock.appendChild(commentField);
             
@@ -309,19 +308,19 @@ function generatePrompt() {
         });
     });
 
-    const finalPrompt = `Du är en uppmuntrande, kunnig och coachande AI (typ en expert på hållbarhet för unga). En högstadieelev har precis fyllt i en klimatkalkylator. Formuläret var helt objektivt och värderingsfritt. Ditt jobb är att nu att analysera svaren, räkna ut ett ungefärligt klimatavtryck (gärna med en lekfull och förståelig jämförelse).
+    const finalPrompt = `Du är en uppmuntrande, kunnig och coachande AI. En högstadieelev har precis fyllt i en klimatkalkylator. Formuläret var helt objektivt. Ditt jobb är nu att analysera svaren och räkna ut ett ungefärligt klimatavtryck.
 
-Viktigast av allt: Ge din feedback som "Two stars and a wish"!
-⭐ Star 1: Beröm något som eleven redan gör väldigt bra för klimatet (hitta något positivt i datan!).
-⭐ Star 2: Beröm ett annat positivt mönster eller en klok kommentar eleven gjort.
-🌟 A Wish: Ge ETT konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck, utan att det känns övermäktigt. Välj något där de har egen agens (t.ex. inte byta värmesystem, utan kanske konsumtion, reparation, pakethämtning eller duschtid).
+Ge din feedback som "Two stars and a wish":
+* Star 1: Beröm något som eleven redan gör väldigt bra för klimatet. Hitta något positivt i datan.
+* Star 2: Beröm ett annat positivt mönster eller en klok kommentar eleven gjort.
+* A Wish: Ge ett konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck. Välj något där de har egen agens, till exempel konsumtion, reparation, pakethämtning eller duschtid.
 
-Fokusera på "empowerment" istället för skuld. Om eleven har lämnat egna kommentarer, väv in dem i ditt svar och bekräfta deras tankar! Undvik att vara mästrande.
+Fokusera på "empowerment" istället för skuld. Om eleven har lämnat egna kommentarer, väv in dem i ditt svar och bekräfta deras tankar. Undvik att vara mästrande.
 
-Här är elevens neutrala data:
+Här är elevens data:
 ${answersPrompt}
 
-Vänligen analysera detta och ge din "Two stars and a wish"-feedback direkt till eleven. Använd en inbjudande och stöttande ton.`;
+Vänligen analysera detta och ge din feedback direkt till eleven. Använd en inbjudande och stöttande ton.`;
 
     return finalPrompt;
 }
