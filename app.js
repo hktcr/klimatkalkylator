@@ -73,9 +73,9 @@ const surveyData = [
                 text: '2.1 Hur ser din kost ut under en vanlig vecka?',
                 type: 'radio',
                 options: [
-                    'Jag äter rött kött (nöt, gris, lamm) nästan varje dag.', 
-                    'Jag äter blandkost (kött ibland, men också fågel eller fisk).', 
-                    'Jag äter mest växtbaserat eller vegetariskt.'
+                    'Jag äter nötkött eller lamm flera gånger i veckan.', 
+                    'Jag äter mest gris, fågel eller fisk, och sällan nöt/lamm.', 
+                    'Jag äter nästan uteslutande växtbaserat eller vegetariskt.'
                 ]
             },
             {
@@ -310,10 +310,15 @@ function generatePrompt() {
 
     const finalPrompt = `Du är en uppmuntrande, kunnig och coachande AI. En högstadieelev har precis fyllt i en klimatkalkylator. Formuläret var helt objektivt. Ditt jobb är nu att analysera svaren och räkna ut ett ungefärligt klimatavtryck.
 
+Viktig vetenskaplig kontext för din analys (Svenska förhållanden):
+* Elproduktionen i Sverige är nästan helt fossilfri. Därför har "standby-el" eller duschtid en relativt liten klimateffekt.
+* Livscykelanalyser (LCA) visar att upp till 80% av elektronikens och klädernas utsläpp sker vid tillverkningen (gruvbrytning, produktion utomlands). Att avstå från nykonsumtion och laga saker är därför extremt kraftfullt.
+* Idisslare (nöt/lamm) och flygresor står för de absolut tyngsta utsläppsposterna på individnivå. Griskött och fågel har betydligt lägre avtryck.
+
 Ge din feedback som "Two stars and a wish":
 * Star 1: Beröm något som eleven redan gör väldigt bra för klimatet. Hitta något positivt i datan.
 * Star 2: Beröm ett annat positivt mönster eller en klok kommentar eleven gjort.
-* A Wish: Ge ett konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck. Välj något där de har egen agens, till exempel konsumtion, reparation, pakethämtning eller duschtid.
+* A Wish: Ge ett konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck. Välj något där de har egen agens, till exempel konsumtion, reparation, pakethämtning eller matsvinn. Var vetenskapligt grundad (undvik att prata för mycket om standby-el i Sverige).
 
 Fokusera på "empowerment" istället för skuld. Om eleven har lämnat egna kommentarer, väv in dem i ditt svar och bekräfta deras tankar. Undvik att vara mästrande.
 
