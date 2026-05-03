@@ -12,33 +12,43 @@ const surveyData = [
             },
             {
                 id: 'q1_2',
-                text: '1.2 Vet du hur ditt hem värms upp?',
+                text: '1.2 Hur värms ditt hem upp (kryssa i det som passar bäst, om du vet)?',
                 type: 'radio',
                 options: [
-                    'Klimatsmart (Bergvärme, fjärrvärme, solceller).', 
-                    'Medel (Pellets, ved, modern luftvärmepump).', 
-                    'Hög påverkan (Direktverkande el eller gammal panna).', 
-                    'Ingen aning (Vi räknar på ett svenskt medelvärde).'
+                    'Bergvärme, fjärrvärme eller solceller.', 
+                    'Pellets, ved eller modern luftvärmepump.', 
+                    'Direktverkande el eller äldre panna.', 
+                    'Jag vet faktiskt inte (vilket är helt okej!).'
                 ]
             },
             {
                 id: 'q1_3',
-                text: '1.3 Hur varmt är det hemma/i ditt rum?',
+                text: '1.3 Ungefär hur varmt är det hemma/i ditt rum?',
                 type: 'radio',
                 options: [
-                    'T-shirt-väder (Varmt, ca 22 grader).', 
-                    'Lagom (ca 20 grader).', 
-                    'Tofflor & tröja-mode (Svalare, ca 18 grader).'
+                    'Varmt (22 grader eller varmare).', 
+                    'Runt 20 grader.', 
+                    'Svalare (18 grader eller kallare).'
                 ]
             },
             {
                 id: 'q1_4',
-                text: '1.4 Stänger du av elektronik helt när du inte använder den (t.ex. gaming-datorn, TV:n)?',
+                text: '1.4 Hur gör du med elektronik när du inte använder den (dator, TV osv)?',
                 type: 'radio',
                 options: [
-                    'Nej, de står ofta på eller i standby-läge.', 
-                    'Ibland, om jag kommer ihåg det.', 
-                    'Ja, alltid! Jag stänger av skärmar och drar ur sladdar.'
+                    'De står ofta på eller i standby-läge.', 
+                    'Jag stänger av ibland, när jag kommer ihåg.', 
+                    'Jag stänger oftast av skärmar och apparater helt.'
+                ]
+            },
+            {
+                id: 'q1_5',
+                text: '1.5 Finns det husdjur i ditt hem?',
+                type: 'radio',
+                options: [
+                    'Ja, hund eller katt (köttätande).', 
+                    'Ja, smådjur (gnagare, fågel, reptil) eller växtätande.', 
+                    'Nej, inga husdjur.'
                 ]
             }
         ]
@@ -46,26 +56,26 @@ const surveyData = [
     {
         id: 'matvanor',
         icon: 'assets/mat.png',
-        title: 'Matvanor',
+        title: 'Matvanor & Kost',
         questions: [
             {
                 id: 'q2_1',
-                text: '2.1 Hur ser din generella kost ut?',
+                text: '2.1 Hur ser din kost ut under en vanlig vecka?',
                 type: 'radio',
                 options: [
-                    'Mycket kött (nöt/gris/lamm) nästan varje dag.', 
-                    'Blandkost (kött ibland, mycket fågel/fisk).', 
-                    'Mest växtbaserat (Vegetarian/Vegan).'
+                    'Jag äter kött (nöt/gris/lamm) nästan varje dag.', 
+                    'Jag äter blandkost (kött ibland, men också fågel/fisk).', 
+                    'Jag äter mest växtbaserat eller vegetariskt.'
                 ]
             },
             {
                 id: 'q2_2',
-                text: '2.2 Hur ofta hamnar mat i soporna hemma hos dig (mat-svinn)?',
+                text: '2.2 Hur ofta slängs mat hemma hos er (från kylen eller tallriken)?',
                 type: 'radio',
                 options: [
-                    'Ofta (Vi rensar kylen ofta på gamla rester eller slänger från tallriken).', 
-                    'Ibland (Någon gång i veckan).', 
-                    'Nästan aldrig (Vi äter upp allt!).'
+                    'Ofta.', 
+                    'Någon gång i veckan.', 
+                    'Nästan aldrig.'
                 ]
             }
         ]
@@ -77,19 +87,20 @@ const surveyData = [
         questions: [
             {
                 id: 'q3_1',
-                text: '3.1 Hur tar du dig oftast till skolan/träningen?',
+                text: '3.1 Hur tar du dig oftast till skolan och dina fritidsaktiviteter?',
                 type: 'radio',
                 options: [
-                    'Skjutsas i fossilbil eller kör egen A-traktor/Moped.', 
-                    'Åker kollektivt (Buss/Tåg) eller samåker/elbil.', 
-                    'Går eller cyklar för det mesta.'
+                    'Åker bil.', 
+                    'Kör A-traktor / EPA / Moped.',
+                    'Åker kollektivt (buss eller tåg) eller samåker.', 
+                    'Går eller cyklar.'
                 ]
             },
             {
                 id: 'q3_2',
-                text: '3.2 Hur många gånger har du flugit det senaste året?',
+                text: '3.2 Ungefär hur mycket har du flugit det senaste året?',
                 type: 'text',
-                placeholder: 'T.ex. "2 ggr i Europa, 1 gång utanför"'
+                placeholder: 'T.ex. "en resa till Spanien" eller "har inte flugit alls"'
             }
         ]
     },
@@ -100,38 +111,38 @@ const surveyData = [
         questions: [
             {
                 id: 'q4_1',
-                text: '4.1 Hur mycket streamar du (TikTok/Youtube) eller spelar krävande onlinespel per dag?',
+                text: '4.1 Hur många timmar per dag spenderar du i genomsnitt på att streama video (TikTok/Youtube) eller spela onlinespel?',
                 type: 'radio',
-                options: ['Över 5 timmar.', '2–4 timmar.', 'Under 1 timme.']
+                options: ['Mer än 5 timmar.', '2–4 timmar.', 'Under 1 timme.']
             },
             {
                 id: 'q4_2',
-                text: '4.2 Hur ofta gör du "hauls" eller köper nytt (kläder, smink, skins, prylar - t.ex. från Shein/Temu/Normal)?',
+                text: '4.2 Hur ofta köper du nya saker (kläder, smink, in-game skins, inredning, prylar)?',
                 type: 'radio',
                 options: [
-                    '"Trendföljaren": Jag köper något nytt nästan varje vecka.', 
-                    '"Behovsshopparen": Jag köper ca 1–2 gånger i månaden.', 
-                    '"Minimalisten": Sällan, bara när jag verkligen måste.'
+                    'Flera gånger i månaden.', 
+                    'Ungefär en gång i månaden.', 
+                    'Någon gång per halvår eller mer sällan.'
                 ]
             },
             {
                 id: 'q4_3',
-                text: '4.3 Second hand-faktorn (t.ex. Vinted, Plick, Tradera)',
+                text: '4.3 Hur brukar du göra när du handlar kläder eller andra saker?',
                 type: 'radio',
                 options: [
-                    'Allt är nytt: Jag köper nästan bara helt nya grejer.', 
-                    'Blandat: Jag kollar ofta efter begagnat på Vinted/Tradera först.', 
-                    'Second hand-proffs: Mycket är begagnat eller ärvt.'
+                    'Jag köper nästan alltid helt nytt.', 
+                    'Jag blandar mellan nytt och second hand (t.ex. Vinted/Tradera).', 
+                    'Jag handlar ofta second hand eller byter med andra.'
                 ]
             },
             {
                 id: 'q4_4',
-                text: '4.4 Hur ofta får/köper du en ny mobil eller hörlurar?',
+                text: '4.4 Hur ofta byter du mobiltelefon?',
                 type: 'radio',
                 options: [
-                    'Varje år (måste ha det senaste!).', 
-                    'Vartannat/Vart tredje år.', 
-                    'Bara när de gamla går helt sönder.'
+                    'Varje år.', 
+                    'Vartannat eller vart tredje år.', 
+                    'Bara när den gamla går sönder och inte kan lagas.'
                 ]
             }
         ]
@@ -143,22 +154,22 @@ const surveyData = [
         questions: [
             {
                 id: 'q5_1',
-                text: '5.1 Hur hanterar du ditt eget skräp (pant, godispapper, trasiga sladdar/e-avfall)?',
+                text: '5.1 Hur gör du oftast med ditt eget skräp (pant, förpackningar, batterier)?',
                 type: 'radio',
                 options: [
-                    '"Allt i samma påse": Allt åker i brännbart.', 
-                    '"Slarvsorteraren": Sorterar pant och papper, resten slängs.', 
-                    '"Proffssorteraren": Sorterar allt – även elektronik och batterier.'
+                    'Lägger det mesta i den vanliga soppåsen.', 
+                    'Sorterar ibland (t.ex. pant och papper).', 
+                    'Sorterar det mesta, även plast, papper och elektronik.'
                 ]
             },
             {
                 id: 'q5_2',
-                text: '5.2 Hur ser din duschrutin ut?',
+                text: '5.2 Ungefär hur länge brukar du duscha?',
                 type: 'radio',
                 options: [
-                    '"Konsert i duschen" (15–20 minuter eller mer).', 
-                    'Medel (ca 10 minuter).', 
-                    'Snabbdusch (Under 5 minuter).'
+                    'Över 15 minuter.', 
+                    'Runt 10 minuter.', 
+                    'Under 5 minuter.'
                 ]
             }
         ]
@@ -225,7 +236,7 @@ function renderForm() {
             // Kommentarsfält för varje fråga
             const commentField = document.createElement('textarea');
             commentField.name = `${q.id}_comment`;
-            commentField.placeholder = "Egna tankar? (T.ex. varför du valde detta, om du vill ändra på något...)";
+            commentField.placeholder = "Egna tankar? (T.ex. varför du valde detta, om du vill förklara närmare...)";
             commentField.className = 'comment-field';
             questionBlock.appendChild(commentField);
             
@@ -258,16 +269,16 @@ function generatePrompt() {
         });
     });
 
-    const finalPrompt = `Du är en uppmuntrande, kunnig och coachande AI (typ en expert på hållbarhet för unga). En högstadieelev har precis fyllt i en klimatkalkylator. Ditt jobb är att analysera svaren, räkna ut ett ungefärligt klimatavtryck (gärna med en lekfull jämförelse).
+    const finalPrompt = `Du är en uppmuntrande, kunnig och coachande AI (typ en expert på hållbarhet för unga). En högstadieelev har precis fyllt i en klimatkalkylator. Formuläret var helt objektivt och värderingsfritt. Ditt jobb är att nu att analysera svaren, räkna ut ett ungefärligt klimatavtryck (gärna med en lekfull och förståelig jämförelse).
 
 Viktigast av allt: Ge din feedback som "Two stars and a wish"!
-⭐ Star 1: Beröm något som eleven redan gör väldigt bra för klimatet.
+⭐ Star 1: Beröm något som eleven redan gör väldigt bra för klimatet (hitta något positivt i datan!).
 ⭐ Star 2: Beröm ett annat positivt mönster eller en klok kommentar eleven gjort.
-🌟 A Wish: Ge ETT konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck, utan att det känns övermäktigt. 
+🌟 A Wish: Ge ETT konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck, utan att det känns övermäktigt. Välj något där de har egen agens (t.ex. inte byta värmesystem, utan kanske konsumtion, duschtid, eller svinn).
 
-Fokusera på "empowerment" istället för skuld. Om eleven har lämnat egna kommentarer, väv in dem i ditt svar och bekräfta deras tankar!
+Fokusera på "empowerment" istället för skuld. Om eleven har lämnat egna kommentarer, väv in dem i ditt svar och bekräfta deras tankar! Undvik att vara mästrande.
 
-Här är elevens svar:
+Här är elevens neutrala data:
 ${answersPrompt}
 
 Vänligen analysera detta och ge din "Two stars and a wish"-feedback direkt till eleven. Använd en inbjudande och stöttande ton.`;
