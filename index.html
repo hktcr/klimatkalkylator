@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimatkalkylatorn 🌍</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="app-header">
+            <div class="emoji-hero">🌍</div>
+            <h1>Klimatkalkylatorn</h1>
+            <p class="subtitle">Din vardag, din framtid. Fyll i, kommentera och få en AI-driven analys av ditt klimatavtryck.</p>
+        </header>
+
+        <form id="climate-form" class="glass-panel">
+            <div class="form-sections" id="form-sections">
+                <!-- Innehållet genereras via app.js -->
+            </div>
+            
+            <div class="submit-area">
+                <p class="instructions">När du är klar, klicka nedan för att generera en AI-prompt som du kan klistra in i Gemini för att få din klimatprofil och konkreta, peppiga tips!</p>
+                <button type="submit" class="generate-btn" id="generate-btn">
+                    <span class="btn-icon">✨</span>
+                    <span class="btn-text">Generera AI-Prompt & Kopiera</span>
+                </button>
+                <div class="success-message" id="success-message">
+                    Prompt kopierad till urklipp! 🚀 Gå till Gemini och klistra in.
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
