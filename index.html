@@ -20,7 +20,7 @@
                 <img src="assets/earth.png" alt="Planet Earth" class="hero-image">
             </div>
             <h1>Klimatkalkylatorn</h1>
-            <p class="subtitle">Din vardag, din framtid. Fyll i, kommentera och få en AI-driven analys av ditt klimatavtryck.</p>
+            <p class="subtitle">Gör de val som passar din vardag bäst. Ingen är perfekt – syftet är att lära sig! Fyll i (och kommentera om du vill), så får du en personlig och peppig AI-analys.</p>
         </header>
 
         <form id="climate-form" class="glass-panel">
@@ -29,13 +29,13 @@
             </div>
             
             <div class="submit-area">
-                <p class="instructions">När du är klar, klicka nedan för att generera en AI-prompt som du kan klistra in i Gemini för att få din klimatprofil och konkreta, peppiga tips!</p>
+                <p class="instructions">När du är klar: Klicka på knappen nedan. Din unika klimatprofil kopieras då automatiskt. Öppna sedan din AI (t.ex. Gemini) och klistra in texten!</p>
                 <button type="submit" class="generate-btn" id="generate-btn">
-                    <span class="btn-icon">✨</span>
-                    <span class="btn-text">Generera AI-Prompt & Kopiera</span>
+                    <span class="btn-icon" id="btn-icon">✨</span>
+                    <span class="btn-text" id="btn-text">Kopiera din profil för AI-analys</span>
                 </button>
                 <div class="success-message" id="success-message">
-                    Prompt kopierad till urklipp! 🚀 Gå till Gemini och klistra in.
+                    ✅ Kopierad! Gå till din AI-chatt och klistra in (Cmd+V / Ctrl+V).
                 </div>
             </div>
         </form>

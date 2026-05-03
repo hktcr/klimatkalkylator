@@ -275,7 +275,7 @@ function renderForm() {
             
             const commentField = document.createElement('textarea');
             commentField.name = `${q.id}_comment`;
-            commentField.placeholder = "Egna tankar? (Exempelvis varför du valde detta eller om du vill förklara närmare)";
+            commentField.placeholder = "Valfritt: Egna tankar? (Exempelvis varför du valde detta eller om du vill förklara närmare)";
             commentField.className = 'comment-field';
             questionBlock.appendChild(commentField);
             
@@ -315,7 +315,7 @@ Viktig vetenskaplig kontext för din analys (Svenska förhållanden):
 * Livscykelanalyser (LCA) visar att upp till 80% av elektronikens och klädernas utsläpp sker vid tillverkningen (gruvbrytning, produktion utomlands). Att avstå från nykonsumtion och laga saker är därför extremt kraftfullt.
 * Idisslare (nöt/lamm) och flygresor står för de absolut tyngsta utsläppsposterna på individnivå. Griskött och fågel har betydligt lägre avtryck.
 
-Ge din feedback som "Two stars and a wish":
+Ge din feedback som "Two stars and a wish" (använd gärna emojis och punktlistor för att göra det lättläst):
 * Star 1: Beröm något som eleven redan gör väldigt bra för klimatet. Hitta något positivt i datan.
 * Star 2: Beröm ett annat positivt mönster eller en klok kommentar eleven gjort.
 * A Wish: Ge ett konkret, peppigt tips på vad eleven kan utveckla för att minska sitt avtryck. Välj något där de har egen agens, till exempel konsumtion, reparation, pakethämtning eller matsvinn. Var vetenskapligt grundad (undvik att prata för mycket om standby-el i Sverige).
@@ -338,15 +338,23 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         
         const promptText = generatePrompt();
+        const btn = document.getElementById('generate-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnIcon = document.getElementById('btn-icon');
         
         try {
             await navigator.clipboard.writeText(promptText);
             const successMsg = document.getElementById('success-message');
             successMsg.classList.add('show');
             
+            // Permanent button state change
+            btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            btnText.innerText = "Kopierad! Öppna din AI och klistra in";
+            btnIcon.innerText = "✅";
+            
             setTimeout(() => {
                 successMsg.classList.remove('show');
-            }, 5000);
+            }, 8000);
         } catch (err) {
             console.error('Kunde inte kopiera:', err);
             alert("Kunde inte kopiera automatiskt. Kopiera texten här nere:\n\n" + promptText);

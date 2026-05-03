@@ -108,6 +108,12 @@ body {
     border-radius: 25%;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
 }
 
 @keyframes bounce {
