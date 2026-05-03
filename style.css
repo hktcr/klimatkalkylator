@@ -96,14 +96,23 @@ body {
 }
 
 .emoji-hero {
-    font-size: 4rem;
     margin-bottom: 0.5rem;
-    animation: bounce 2s infinite ease-in-out;
+    display: inline-block;
+    animation: bounce 3s infinite ease-in-out;
+}
+
+.hero-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 25%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-15px); }
 }
 
 h1 {
@@ -146,17 +155,27 @@ h1 {
 .section-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.section-icon {
-    font-size: 2rem;
+.section-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 20%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s;
+}
+
+.section-image:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #e2e8f0;
 }
 
@@ -215,6 +234,7 @@ h1 {
     cursor: pointer;
     position: relative;
     transition: all 0.2s ease;
+    flex-shrink: 0;
 }
 
 .radio-input:checked {
@@ -239,9 +259,8 @@ h1 {
     font-weight: 500;
 }
 
-.radio-label:has(.radio-input:checked) {
-    background: rgba(59, 130, 246, 0.1);
-    border-color: var(--accent-primary);
+.radio-text {
+    line-height: 1.4;
 }
 
 .text-input {

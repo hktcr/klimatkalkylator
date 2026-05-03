@@ -1,8 +1,8 @@
 const surveyData = [
     {
         id: 'boende',
-        icon: '🏠',
-        title: 'Boende & Uppvärmning',
+        icon: 'assets/boende.png',
+        title: 'Boende, Uppvärmning & Energi',
         questions: [
             {
                 id: 'q1_1',
@@ -30,38 +30,60 @@ const surveyData = [
                     'Lagom (ca 20 grader).', 
                     'Tofflor & tröja-mode (Svalare, ca 18 grader).'
                 ]
+            },
+            {
+                id: 'q1_4',
+                text: '1.4 Stänger du av elektronik helt när du inte använder den (t.ex. gaming-datorn, TV:n)?',
+                type: 'radio',
+                options: [
+                    'Nej, de står ofta på eller i standby-läge.', 
+                    'Ibland, om jag kommer ihåg det.', 
+                    'Ja, alltid! Jag stänger av skärmar och drar ur sladdar.'
+                ]
             }
         ]
     },
     {
         id: 'matvanor',
-        icon: '🍕',
+        icon: 'assets/mat.png',
         title: 'Matvanor',
         questions: [
             {
                 id: 'q2_1',
-                text: '2.1 Hur ofta äter du kött (nöt, gris, lamm)?',
+                text: '2.1 Hur ser din generella kost ut?',
                 type: 'radio',
-                options: ['Varje dag.', 'Några gånger i veckan.', 'Aldrig (Vegetarian/Vegan).']
+                options: [
+                    'Mycket kött (nöt/gris/lamm) nästan varje dag.', 
+                    'Blandkost (kött ibland, mycket fågel/fisk).', 
+                    'Mest växtbaserat (Vegetarian/Vegan).'
+                ]
             },
             {
                 id: 'q2_2',
-                text: '2.2 Hur ofta hamnar mat i soporna hemma hos dig?',
+                text: '2.2 Hur ofta hamnar mat i soporna hemma hos dig (mat-svinn)?',
                 type: 'radio',
-                options: ['Ofta (Vi rensar kylen ofta på gamla rester).', 'Ibland (Någon gång i veckan).', 'Nästan aldrig (Vi äter upp allt!).']
+                options: [
+                    'Ofta (Vi rensar kylen ofta på gamla rester eller slänger från tallriken).', 
+                    'Ibland (Någon gång i veckan).', 
+                    'Nästan aldrig (Vi äter upp allt!).'
+                ]
             }
         ]
     },
     {
         id: 'resor',
-        icon: '✈️',
+        icon: 'assets/resor.png',
         title: 'Resor & Transport',
         questions: [
             {
                 id: 'q3_1',
-                text: '3.1 Hur tar du dig till skolan/träningen oftast?',
+                text: '3.1 Hur tar du dig oftast till skolan/träningen?',
                 type: 'radio',
-                options: ['Bil.', 'Buss eller tåg.', 'Går, cyklar eller moped.']
+                options: [
+                    'Skjutsas i fossilbil eller kör egen A-traktor/Moped.', 
+                    'Åker kollektivt (Buss/Tåg) eller samåker/elbil.', 
+                    'Går eller cyklar för det mesta.'
+                ]
             },
             {
                 id: 'q3_2',
@@ -73,55 +95,55 @@ const surveyData = [
     },
     {
         id: 'prylar',
-        icon: '📱',
+        icon: 'assets/shopping.png',
         title: 'Prylar, Shopping & Skärmtid',
         questions: [
             {
                 id: 'q4_1',
-                text: '4.1 Hur mycket streamar du video (TikTok/Youtube) eller spelar onlinespel per dag?',
+                text: '4.1 Hur mycket streamar du (TikTok/Youtube) eller spelar krävande onlinespel per dag?',
                 type: 'radio',
                 options: ['Över 5 timmar.', '2–4 timmar.', 'Under 1 timme.']
             },
             {
                 id: 'q4_2',
-                text: '4.2 Hur ofta köper du "nytt" (kläder, smink, skins, prylar - t.ex. från Shein/Temu)?',
+                text: '4.2 Hur ofta gör du "hauls" eller köper nytt (kläder, smink, skins, prylar - t.ex. från Shein/Temu/Normal)?',
                 type: 'radio',
                 options: [
                     '"Trendföljaren": Jag köper något nytt nästan varje vecka.', 
                     '"Behovsshopparen": Jag köper ca 1–2 gånger i månaden.', 
-                    '"Minimalisten": Sällan, kanske några gånger om året.'
+                    '"Minimalisten": Sällan, bara när jag verkligen måste.'
                 ]
             },
             {
                 id: 'q4_3',
-                text: '4.3 Second hand-faktorn',
+                text: '4.3 Second hand-faktorn (t.ex. Vinted, Plick, Tradera)',
                 type: 'radio',
                 options: [
                     'Allt är nytt: Jag köper nästan bara helt nya grejer.', 
-                    'Blandat: Jag kollar ofta efter begagnat först.', 
+                    'Blandat: Jag kollar ofta efter begagnat på Vinted/Tradera först.', 
                     'Second hand-proffs: Mycket är begagnat eller ärvt.'
                 ]
             },
             {
                 id: 'q4_4',
-                text: '4.4 Hur ofta får du en ny mobil eller hörlurar?',
+                text: '4.4 Hur ofta får/köper du en ny mobil eller hörlurar?',
                 type: 'radio',
                 options: [
                     'Varje år (måste ha det senaste!).', 
                     'Vartannat/Vart tredje år.', 
-                    'Bara när de gamla går sönder.'
+                    'Bara när de gamla går helt sönder.'
                 ]
             }
         ]
     },
     {
         id: 'vardag',
-        icon: '🚿',
+        icon: 'assets/atervinning.png',
         title: 'Vardag & Återvinning',
         questions: [
             {
                 id: 'q5_1',
-                text: '5.1 Hur hanterar du ditt eget skräp (pant, godispapper, e-avfall)?',
+                text: '5.1 Hur hanterar du ditt eget skräp (pant, godispapper, trasiga sladdar/e-avfall)?',
                 type: 'radio',
                 options: [
                     '"Allt i samma påse": Allt åker i brännbart.', 
@@ -153,7 +175,7 @@ function renderForm() {
         const header = document.createElement('div');
         header.className = 'section-header';
         header.innerHTML = `
-            <span class="section-icon">${section.icon}</span>
+            <img src="${section.icon}" alt="${section.title} ikon" class="section-image">
             <h2 class="section-title">${section.title}</h2>
         `;
         sectionDiv.appendChild(header);
@@ -218,7 +240,7 @@ function generatePrompt() {
     let answersPrompt = "";
     
     surveyData.forEach(section => {
-        answersPrompt += `\n### ${section.icon} ${section.title}\n`;
+        answersPrompt += `\n### ${section.title}\n`;
         section.questions.forEach(q => {
             let answer = "";
             if (q.type === 'radio') {
